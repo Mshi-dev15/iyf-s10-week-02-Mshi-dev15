@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.page-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.top-heading{
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+
+.main-container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 90vh;
+    margin-top: 10px;
+}
+
+.margin-layer{
+    background-color: rgb(236, 166, 136);
+    padding: 40px;
+    display: inline-block;
+    border: 2px dashed black;
+}
+.border-layer{
+    background-color: rgb(224, 188, 173);
+    padding: 40px;
+    border: 2px solid black;
+}
+.padding-layer{
+    padding: 40px;
+    background-color: lightgreen;
+    border: 2px dashed black;
+}
+.content-layer{
+background-color: lightblue;
+width: 200px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+border: 2px solid black;
+}
+/* This box ends up 340px wide - why? Fix it! */
+.broken-box {
+    width: 300px;
+    padding: 20px;
+    border: none;
+}
+
+.bg{
+    position: absolute;
+    top: 0;
+    height: 90vh;
+    width: 100%;
+    z-index: -1;
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('images/1000085414.jpg');
+}
+h2{
+    font-size: 24px;
+    margin-top: 5px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile{
+    margin: 10px;
+    width: 300px;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: lightskyblue;
+    min-height:350px ;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.user-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+}
+.img-wrapper{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.img-wrapper img{
+    object-fit: cover;
+    width: 200px;
+    height: 100%;
+
+}
