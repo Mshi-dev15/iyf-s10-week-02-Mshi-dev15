@@ -76,6 +76,15 @@ nav {
 
 .nav-link { display: flex; list-style: none; gap: 20px; }
 
+.navbar .fa-bars {
+    font-size: 1.8rem;   /* size of the icon */
+    cursor: pointer;      /* make it clickable */
+    display: block;       /* always visible on mobile */
+    color: #fff;          /* icon color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
 /* ====== HERO SECTION ====== */
 #hero {
     display: flex;
@@ -197,20 +206,83 @@ section.project-card img {
 }
 
 /* ====== FOOTER ====== */
-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.8rem;
-    width: 100%;
-    box-sizing: border-box;
+
+.site-footer {
+  background-color: #0b1120; /* Dark blue/black from your image */
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  
 }
+
+/* MOBILE LAYOUT: Stacked vertically */
+.footer-row{
+  display: flex;
+  flex-direction: column; /* Columns stack on top of each other */
+  gap: 20px; /* Space between the blocks */
+  padding: 0 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.footer-column h3 {
+  color: #ff4d4d; /* Reddish accent color from your image */
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-transform: lowercase;
+}
+
+.footer-column p, .footer-column li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #d1d5db; /* Light grey text */
+}
+
+.footer-column ul {
+  list-style: none;
+}
+.footer-column a:hover {
+    color: #ff6600;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #1f2937;
+  
+  font-size: 0.8rem;
+  color: #9ca3af;
+  width: 100%;
+}
+
+
+/* COPYRIGHT */
+/*.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    color: #aaa;
+}
+*/
+
+
 
 .footer-columns { display: flex; flex-wrap: wrap; justify-content: space-between; }
 .footer-columns > * { min-width: 150px; }
@@ -252,6 +324,21 @@ header { grid-area: header; width: 100%; }
         gap: 25px;
         padding: 25px;
     }
+      .footer-row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-column {
+        flex: 1;           /* evenly divide space */
+        min-width: 150px;  /* prevent shrinking too much */
+        padding: 0 1rem;
+    }
+    
+
+
+     .navbar .fa-bars {
+        display: none;}
     .card{ grid-template-columns: repeat(3, 1fr);
     text-overflow: ellipsis;
     font-size: 1.25rem;}
@@ -279,7 +366,78 @@ header { grid-area: header; width: 100%; }
     border: 5px solid rgb(233, 50, 50);
     flex: 1 0 auto;
     }
-}
+    
+     
+    /*.site-footer {
+        flex-direction: row; /* Change from vertical to horizontal */
+    /*justify-content: space-between;
+    max-width: 1100px;
+    width: 100vw;
+    position: relative;
+    margin: 0 auto; /* Center the whole footer on big screens */
+ /*}
+
+  /*.footer-column {
+    flex: 1; /* Each column takes equal space */
+   /* max-width: 300px;
+  }
+    
+
+
+
+  /*.footer-container {
+    width: 100vw; 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #0b1120; /* Match your dark background */
+    /*padding: 60px 0 30px 0;
+    overflow: hidden;}
+  
+
+  /* 2. Spread the 3 columns across the 1024px width */
+   /*.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Equal space between columns */
+    /*align-items: flex-start;
+    max-width: 1024px;
+    margin: 0 auto; /* Centers the text block on the screen */
+    /*padding: 0 50px;
+  }
+
+  /* 3. Give columns specific width so they don't look squished */
+  /*.footer-column {
+    flex: 1;
+    max-width: 300px;
+  }
+
+  /* 4. Fix the Copyright Bar at the absolute bottom */
+  /*.footer-bottom {
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }*/
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar .fa-bars {
+        display: none;}
 
 
     .main-content { grid-area: main;
@@ -293,7 +451,7 @@ header { grid-area: header; width: 100%; }
         display: block; /* each card is just a block */
     width: 100%;
        }
-
+    }
 
 /* LARGE DESKTOP */
 @media (min-width: 1440px) {
@@ -306,4 +464,25 @@ header { grid-area: header; width: 100%; }
     }
     
     .intrest-gallery { grid-template-columns: repeat(4, 1fr); }
+
+.navbar .fa-bars {
+        display: none;}
+        .footer-row {
+        gap: 3rem;
+    }
+
+    .footer-row {
+        gap: 3rem;
+    }
+    .site-footer {
+        padding: 3rem 4rem 2rem 4rem;
+    }
+    .footer-column h3 {
+        font-size: 1.4rem;
+    }
+    .footer-column p,
+    .footer-column a,
+    .footer-column li {
+        font-size: 1rem;
+    }
 }

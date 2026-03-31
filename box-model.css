@@ -10,6 +10,7 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color:black ;
 }
 .page-wrapper{
     display: flex;
@@ -73,11 +74,12 @@ border: 2px solid black;
 .bg{
     position: absolute;
     top: 0;
-    height: 90vh;
+    height: 40vh;
     width: 100%;
     z-index: -1;
-     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('images/1000085414.jpg');
+    background: #475841;
+     /*background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('images/1000085414.jpg');*/
 }
 h2{
     font-size: 24px;
@@ -97,8 +99,7 @@ h2{
     gap: 1rem;
     box-shadow: lightskyblue;
     min-height:350px ;
-    justify-content: flex-start;
-    align-items: flex-start;
+
 }
 .user-detail{
     display: flex;
@@ -111,10 +112,11 @@ h2{
     height: 200px;
     border-radius: 100%;
     overflow: hidden;
+
 }
 .img-wrapper img{
     object-fit: cover;
-    width: 200px;
+    width: 100%;
     height: 100%;
 
 }
