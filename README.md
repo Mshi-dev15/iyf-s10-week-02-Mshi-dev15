@@ -40,5 +40,5 @@ This project is a fully responsive portfolio website built with HTML and CSS. Th
 - Solving layout issues caused by default margins and padding  
  
 
-## Live Demo (if deployed)
-[View Live Demo](https://mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/)
+## Live Demo 
+[🚀View Live Demo here](https://mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/);
