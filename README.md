@@ -39,6 +39,13 @@ This project is a fully responsive portfolio website built with HTML and CSS. Th
 - Making the footer stick correctly while keeping responsive spacing  
 - Solving layout issues caused by default margins and padding  
  
+## screenshots
+### photo-gallery exercise
+![photo-gallery screenshot](https://github.com/Mshi-dev15/iyf-s10-week-02-Mshi-dev15/blob/main/Screenshot%202026-04-01%20015811.png)
+
+### box-model exercise
+![box-model screenshot](https://github.com/Mshi-dev15/iyf-s10-week-02-Mshi-dev15/blob/main/Screenshot%202026-04-01%20005029.png)
+
 
 ## Live Demo 
 [🚀View Live Demo here](https://mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/);
