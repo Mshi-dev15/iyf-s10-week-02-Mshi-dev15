@@ -77,6 +77,7 @@ nav {
     padding: 1rem 2rem;
     background-color: var(--color-primary);
     width: 100%;
+    color: white;
 }
 
 .nav-link { display: flex; list-style: none; gap: 20px; }

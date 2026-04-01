@@ -1,7 +1,10 @@
 
-  const menuIcon = document.querySelector(".fa-bars");
-  const navLinks = document.querySelector(".nav-link");
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
 
-  menuIcon.addEventListener("click", () => {
+menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
-  });
+});
+console.log("clicked");
+
+console.log("JS is working");
