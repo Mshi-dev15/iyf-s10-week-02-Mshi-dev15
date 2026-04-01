@@ -32,11 +32,13 @@
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 0.05em;
+    max-width: 100%;
 }
 
 html, body {
     height: 100%;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     font-family: var(--body-font);
@@ -46,14 +48,17 @@ html, body {
     color: var(--color-text);
     width: 100%;
     overflow-x: hidden;
+    
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    padding: 0;
 }
 
 h1 { font-size: var(--font-4xl); color: var(--color-primary); z-index: 10; }
@@ -80,8 +85,23 @@ nav {
     color: white;
 }
 
-.nav-link { display: flex; list-style: none; gap: 20px; }
-
+.nav-link { 
+    display: none; 
+    list-style: none; gap: 20px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    padding: 20px;
+    z-index: 9999; }
+ 
+#menu-btn{
+    position: relative;
+    z-index: 10000;
+}   
+    
 .navbar .fa-bars {
     font-size: 1.8rem;   /* size of the icon */
     cursor: pointer;      /* make it clickable */
@@ -107,12 +127,14 @@ nav {
 /* ====== HERO SECTION ====== */
 #hero {
     display: flex;
+    width: 100%;
+    max-width: 100%;
     flex-direction: column; /* mobile first */
     align-items: center;
     justify-content: center;
-    margin: 20px auto;
+    margin: 0 auto;
     max-width: 90%;
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 10px;
     background: var(--color-background);
     box-shadow: var(--color-primary-light);
@@ -120,12 +142,14 @@ nav {
 }
 
 #hero img {
-    width: 100%;
     max-width: 250px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     margin: 15px 0 0 0;
     object-fit: cover;
+    
+
 }
 
 #hero h1, #hero h2, #hero p, #hero a {
@@ -161,13 +185,31 @@ label{
 
 /* ====== PROJECT CARDS ====== */
 section.project-card {
-    display: block;
-    grid-template-columns: 1fr; /* mobile first */
+   /* display: grid;
+    grid-template-columns: auto 1fr auto; /* mobile first */
+    display: flex;
+    flex-direction: column;
     gap: 15px;
-    padding: 15px;
-    width: 100%;
+    overflow: hidden;
     box-shadow: var(--color-primary-light);
     transition: transform 0.3s ease;
+}
+
+section.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+section.project-card h2 {
+    font-size: var(--font-2xl);
+    overflow: hidden;         /* hide excess text */
+    text-overflow: ellipsis;
+    display: block;
+    max-height: 3em;
+    line-height: 1.2em;
+    padding-left: 10px;  /* show “…” if too long */
 }
 
 section.project-card:hover { transform: translateY(-5px); }
@@ -177,6 +219,7 @@ section.project-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    flex-shrink: 0;
     transition: all 0.3s ease;
 }
 .gallery-grid{
@@ -314,18 +357,55 @@ footer a:hover { color: var(--color-primary-dark); text-decoration: underline; }
         "header"
         "main"
         "gallery"
-        "aside"
-        "footer";
+        "aside";
     gap: 20px;
     padding: 15px;
+    width: 100% ;
+    box-sizing: border-box;
+    
 
 }
+#hero-image{
+    max-width: none;
+    width: 100%;
+    height: auto;
+}
+.intrest-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* single column on mobile */
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+.intrest-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+    
+#hero-image{
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
 
-/* Grid sections */
+
+
+ Grid sections */
 header { grid-area: header; width: 100%; }
-.main-content { grid-area: main; display: flex; flex-direction: column; gap: 15px; text-align: center; }
-.intrest-gallery { grid-area: gallery; display: grid; grid-template-columns: 1fr; gap: 10px; }
-.sidebar { grid-area: aside; display: flex; flex-direction: column; gap: 10px; }
+.main-content { grid-area: main;
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+     gap: 15px; 
+     text-align: center; }
+.intrest-gallery { grid-area: gallery; width: 100%; 
+    display: grid; 
+    grid-template-columns:  1fr; 
+    gap: 10px; }
+.sidebar { grid-area: aside; width: 100%; display: flex; flex-direction: column; gap: 10px; }
 .mag-footer { grid-area: footer; }
 
 /* ====== MEDIA QUERIES ====== */
@@ -378,10 +458,10 @@ header { grid-area: header; width: 100%; }
     .magazine-grid {
          display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
+    /*grid-template-areas:
         "header header"
         "main gallery"
-        "aside aside";
+        "aside aside";*/
      gap: 30px; 
     /* padding: 20px; */
     max-width: 1200px;
@@ -454,8 +534,8 @@ header { grid-area: header; width: 100%; }
 
 
 
-
-
+    
+    
 
 
 
@@ -464,9 +544,10 @@ header { grid-area: header; width: 100%; }
 .navbar .fa-bars {
         display: none;}
 
-
     .main-content { grid-area: main;
-        flex-direction: column; text-align: left; }
+        flex-direction: column;
+        width: 100%;
+        text-align: left; }
     .intrest-gallery { grid-area: gallery;
         display: grid;
         min-width: 200px;
@@ -476,7 +557,7 @@ header { grid-area: header; width: 100%; }
         display: block; /* each card is just a block */
     width: 100%;
        }
-    }
+    }   
 
 /* LARGE DESKTOP */
 @media (min-width: 1440px) {
@@ -495,6 +576,7 @@ header { grid-area: header; width: 100%; }
         .footer-row {
         gap: 3rem;
     }
+   
 
     .footer-row {
         gap: 3rem;
