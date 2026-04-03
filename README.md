@@ -8,6 +8,12 @@
 ## Project Description
 This project is a fully responsive portfolio website built with HTML and CSS. The goal was to practice CSS fundamentals, the box model, typography, color systems, Flexbox, Grid, and mobile-first responsive design to create a professional, visually appealing site.  
 
+## 🚀🚀Live Demo 
+- [View Live Demo here](https://mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/);
+- [Photo Gallery](https://Mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/Photo-Gallery/photo-gallery.html)
+- [Box Model Practice](https://Mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/Box-Model-Practice/box-model-practice.html)
+
+
 ## Technologies Used
 - HTML5  
 - CSS3  
@@ -47,5 +53,3 @@ This project is a fully responsive portfolio website built with HTML and CSS. Th
 ![box-model screenshot](https://github.com/Mshi-dev15/iyf-s10-week-02-Mshi-dev15/blob/main/Screenshot%202026-04-01%20005029.png)
 
 
-## Live Demo 
-[🚀View Live Demo here](https://mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/);
