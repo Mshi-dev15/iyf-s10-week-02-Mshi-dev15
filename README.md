@@ -47,9 +47,9 @@ This project is a fully responsive portfolio website built with HTML and CSS. Th
  
 ## screenshots
 ### photo-gallery exercise
-![photo-gallery screenshot](https://raw.githubusercontent.com/Mshi-dev15/iyf-s10-week-02-Mshi-dev15/main/Screenshot%202026-04-01%20015811.png)
+![photo-gallery screenshot](https://raw.githubusercontent.com/Mshi-dev15/iyf-s10-week-02-Mshi-dev15/main/images/Screenshot%202026-04-01%20015811.png)
 
 ### box-model exercise
-![box-model screenshot](https://raw.githubusercontent.com/Mshi-dev15/iyf-s10-week-02-Mshi-dev15/main/Screenshot%202026-04-01%20005029.png)
+![box-model screenshot](https://raw.githubusercontent.com/Mshi-dev15/iyf-s10-week-02-Mshi-dev15/main/images/Screenshot%202026-04-01%20005029.png)
 
 
