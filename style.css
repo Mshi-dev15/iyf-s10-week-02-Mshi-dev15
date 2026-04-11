@@ -465,7 +465,8 @@ section.project-card img {
 .card {
     display: grid;
     grid-template-columns: 1fr; /* mobile first */
-    gap: 20px;
+    gap: 50px;
+    justify-content: space-around;
     padding: 30px 16px;
     /*max-width: 100%;*/
     max-width: 1200px;
