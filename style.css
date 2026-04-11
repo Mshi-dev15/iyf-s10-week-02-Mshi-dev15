@@ -155,32 +155,149 @@ nav {
 #hero h1, #hero h2, #hero p, #hero a {
     margin-bottom: 10px;
 }
-input, select, textarea{
-    display: block;
-    width: 60%;
-    max-width: 400px;
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: transparent;
-    border: 2px solid black;
-    color: inherit;
-    outline: none;
-    box-sizing: border-box;
-}
-label{
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+
+
 .form-container{
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
 }
-.connect-section{
-    margin-top: 40px;
-    text-align: center;
+
+
+/* ── Contact Page ── */
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  background: var(--color-primary-dark);
+}
+
+legend {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--color-secondary);
+  padding: 0 10px;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: var(--font-sm);
+  font-family: var(--body-font);
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-secondary);
+}
+
+select option {
+  background: var(--color-primary);
+  color: var(--color-text);
+}
+
+textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: var(--font-sm);
+  color: var(--color-text);
+}
+
+/* checkbox row */
+fieldset label:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+fieldset input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+/* Send button */
+form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-secondary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 6px;
+  font-size: var(--font-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+/* Connect section */
+.connect-section,
+body > h2 {
+  text-align: center;
+  margin: 30px auto 10px;
+  color: var(--color-secondary);
+}
+
+body > ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 10px auto 20px;
+  padding: 0;
+}
+
+body > ul li a {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--font-sm);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+body > ul li a:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+body > p {
+  text-align: center;
+  font-size: var(--font-sm);
+  color: var(--color-text);
+  margin-bottom: 40px;
 }
 
 /* ====== PROJECT CARDS ====== */
