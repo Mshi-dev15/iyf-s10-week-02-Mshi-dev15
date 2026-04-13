@@ -401,13 +401,13 @@ section.project-card::before {
   content: '';
   position: absolute;
   inset: -16px;
-  border-radius: 14px;
+  border-radius: 16px;
   background: conic-gradient(
     from var(--angle),
     transparent 20%,
     #ff4d4d 40%,
-    #ffffff 50%,
-    #ff4d4d 60%,
+    greenyellow 50%,
+    #ffffff 60%,
     transparent 80%
   );
   z-index: 0;
