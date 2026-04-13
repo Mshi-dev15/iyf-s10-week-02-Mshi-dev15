@@ -18,9 +18,10 @@ This project is a fully responsive portfolio website built with HTML and CSS. Th
 ---
 
 ## 🚀🚀Live Demo 
-- [View Live Demo here](https://mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/);
-- [Photo Gallery](https://Mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/Photo-Gallery/photo-gallery.html)
-- [Box Model Practice](https://Mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/Box-Model-Practice/box-model-practice.html)
+
+[![Portfolio](https://img.shields.io/badge/🏠%20Portfolio-274D6A?style=for-the-badge&logoColor=white)](https://mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/)
+[![Photo Gallery](https://img.shields.io/badge/📷%20Photo%20Gallery-1572B6?style=for-the-badge&logoColor=white)](https://Mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/Photo-Gallery/photo-gallery.html)
+[![Box Model](https://img.shields.io/badge/📦%20Box%20Model-E34F26?style=for-the-badge&logoColor=white)](https://Mshi-dev15.github.io/iyf-s10-week-02-Mshi-dev15/Box-Model-Practice/box-model-practice.html)
 
 ---
 
