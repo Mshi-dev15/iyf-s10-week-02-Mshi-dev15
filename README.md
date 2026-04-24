@@ -6,7 +6,7 @@
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=flat&logo=github&logoColor=white)
 
 ## Author
-- **Name:** Faith Mshiki Kirimi  
+- **Name:** Faith Mshiki  
 - **GitHub:**[@Mshi-dev15](https://github.com/Mshi-dev15)
 - **Date:** March 28, 2026  
 
