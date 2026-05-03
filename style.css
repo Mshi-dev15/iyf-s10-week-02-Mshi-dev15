@@ -206,8 +206,82 @@ nav {
   font-family: var(--heading-font);
 }
 
+/* ====== HERO LISTS ROW ====== */
+.hero-lists-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto 0 auto;
+}
+ 
+.hero-list-col {
+    flex: 1;
+}
+ 
+/* ── Glassmorphism card wrapper ── */
+.glass-col {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+/* Subtle top gradient stripe */
+.glass-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-secondary), greenyellow, var(--color-secondary));
+    border-radius: 16px 16px 0 0;
+}
+ 
+.glass-col:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 77, 77, 0.15);
+}
+ 
+/* Passions column gets a teal/green top stripe */
+.passion-col::before {
+    background: linear-gradient(90deg, greenyellow, #00e5ff, greenyellow);
+}
+ 
+.hero-list-col h2 {
+    font-size: var(--font-xl);
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+ 
+.col-icon {
+    color: var(--color-secondary);
+    font-size: 1rem;
+}
+ 
+.passion-col h2 .col-icon {
+    color: greenyellow;
+}
+ 
+
 /* Hobbies list */
 .hobbies-list {
+  flex: 1;
   list-style: none;
   padding: 0;
   display: flex;
@@ -217,14 +291,209 @@ nav {
 
 .hobbies-list li {
   font-size: var(--font-sm);
-  color: var(--color-text);
-  padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.06);
-  border-left: 3px solid var(--color-secondary);
-   border-right: 3px solid var(--color-secondary);
-  border-radius: 4px;
-  text-align: left;
+    color: var(--color-text);
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--color-secondary);
+    border-radius: 6px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    cursor: default;
 }
+.hobbies-list li:hover {
+    background: rgba(255, 77, 77, 0.12);
+    border-color: greenyellow;
+    transform: translateX(4px);
+    box-shadow: 0 0 12px rgba(255, 77, 77, 0.2);
+}
+ 
+.hobbies-list li i {
+    color: var(--color-secondary);
+    width: 1.1rem;
+    text-align: center;
+    flex-shrink: 0;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+ 
+.hobbies-list li:hover i {
+    color: greenyellow;
+    text-shadow: 0 0 8px greenyellow;
+}
+ 
+/* Passion column list — icons start green, hover goes coral */
+.passion-col .hobbies-list li {
+    border-left-color: greenyellow;
+}
+ 
+.passion-col .hobbies-list li i {
+    color: greenyellow;
+}
+ 
+.passion-col .hobbies-list li:hover {
+    background: rgba(173, 255, 47, 0.1);
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 12px rgba(173, 255, 47, 0.2);
+}
+ 
+.passion-col .hobbies-list li:hover i {
+    color: var(--color-secondary);
+    text-shadow: 0 0 8px rgba(255, 77, 77, 0.8);
+}
+ 
+@media (min-width: 768px) {
+    .hero-lists-row {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* ====== CERTIFICATIONS ====== */
+.cert-list-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 1.5rem auto 2rem auto;
+    text-align: center;
+}
+
+.cert-heading {
+    font-size: var(--font-2xl);
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.cert-heading i {
+    color: greenyellow;
+}
+
+/* Grid of big cards */
+.cert-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.cert-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 280px;
+    min-height: 100px;
+    padding: 1rem 0.8rem;
+
+    /* Glassmorphism */
+    background: black;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 3px solid var(--color-secondary);
+    border-radius: 14px;
+
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-list li:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 77, 77, 0.1);
+    border-top-color: greenyellow;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 77, 77, 0.25);
+}
+
+.cert-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 77, 77, 0.15);
+    border: 2px solid var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-list li:hover .cert-icon {
+    background: rgba(173, 255, 47, 0.15);
+    border-color: greenyellow;
+    box-shadow: 0 0 16px rgba(173, 255, 47, 0.4);
+}
+
+.cert-icon i {
+    color: greenyellow;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.cert-list li:hover .cert-icon i {
+    color: greenyellow;
+    text-shadow: 0 0 10px greenyellow;
+}
+
+.cert-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    text-align: center;
+}
+
+.cert-title {
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--color-text);
+    font-family: var(--heading-font);
+    line-height: 1.2;
+}
+
+.cert-sub {
+    font-size: var(--font-xs);
+    color: var(--color-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* 2 columns on tablet */
+@media (min-width: 480px) {
+    .cert-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+    
+    
+}
+
+/* 3 columns on desktop */
+@media (min-width: 768px) {
+    .cert-list {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* 5 columns on large desktop (all in one row) */
+@media (min-width: 1100px) {
+    .cert-list {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+}
+
+
+ 
+
 
 /* Divider between intro and hobbies */
 .hero-text h2 {
@@ -517,17 +786,29 @@ section.project-card img {
 }
 
 .intrest-gallery{
+  align-self: flex-start!important;
     grid-area: gallery;
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
-    padding: 0px ;
+    padding-top: 0!important ;
     text-align: center;
     gap: 10px;
-    margin: 0;
+    margin-top: 0!important;
     
 }
-
+.intrest-gallery.glow-card:first-child{
+  margin-top: 0!important;
+}
+.interest-gallery .gallery-grid{
+   margin-top: 0!important;
+   gap:10px;
+}
+.interest-galleryh2{
+   margin-top: 0!important;
+    padding-top: 0!important;
+    margin-bottom: 15px;
+}
 .gallery-grid img{
     width: 100%;
     height: 180px;
@@ -672,13 +953,13 @@ footer a:hover { color: var(--color-primary-dark); text-decoration: underline; }
   content: '';
   position: absolute;
   inset: -2px;
-  border-radius: 13px;
+  border-radius: 10px;
   background: conic-gradient(
     from var(--angle),
     transparent 20%,
-    #ff4d4d 40%,
-    #ffffff 50%,
-    #ff4d4d 60%,
+    greenyellow 40%,
+    #ff4d4d 50%,
+     greenyellow 60%,
     transparent 80%
   );
   z-index: 0;
@@ -951,4 +1232,498 @@ header { grid-area: header; width: 100%; }
     padding: 11px 24px;
     font-size: var(--font-sm);
   }
+}
+
+
+
+/* ====== INDEX — HERO LISTS ROW ====== */
+.hero-lists-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1100px;
+  margin: 1.5rem auto 0 auto;
+}
+
+.hero-list-col {
+  flex: 1;
+}
+
+.hero-list-col h2 {
+  font-size: var(--font-xl);
+  color: var(--color-text);
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 0.4rem;
+}
+
+@media (min-width: 768px) {
+  .hero-lists-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+
+
+/* ========================================
+   ABOUT PAGE - EDUCATION & STORY SECTIONS
+   ======================================== */
+
+/* Education Cards - Responsive Grid */
+.edu-grid {
+  display: flex!important;
+  flex-direction: column!important;
+  grid-template-columns: unset!important;;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.edu-card {
+  width: 100%;
+  max-width: 650px ;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 131, 58, 0.15);
+}
+
+.edu-icon {
+  font-size: 1.4rem;
+  color: #e8833a; /* Consider using var(--color-secondary) for consistency */
+  padding-top: 0.1rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.edu-card h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text); /* Ensure text is visible */
+}
+
+.edu-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* Story Blocks */
+.about-story {
+  margin-top: 2rem;
+  text-align: left; /* Override global center text for this section */
+}
+
+.story-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.story-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.story-icon {
+  font-size: 1.5rem;
+  color: #e8833a;
+  min-width: 2rem;
+  text-align: center;
+  padding-top: 0.15rem;
+}
+
+.story-block h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.story-block p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  opacity: 0.9;
+}
+
+/* About Lists (Sidebar Skills) */
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+}
+
+.about-list i {
+  color: #e8833a;
+  width: 1.2rem;
+  text-align: center;
+}
+
+/* Responsive Enhancements for About Page */
+@media (min-width: 768px) {
+  .edu-grid {
+    display: flex!important;
+    flex-direction: column!important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .edu-grid {
+    display: flex!important;
+    flex-direction: column!important;
+  }
+  
+  .interest-gallery .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Accessibility Focus States */
+.edu-card:focus-within,
+.story-block:focus-within,
+.glow-card:focus-within {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   SIDEBAR: Vertical Column + Boxed Sections
+   ========================================== */
+.sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem;
+    width: 100%;
+    padding: 1rem 0;
+    align-items: stretch;
+}
+
+/* ── Box style for EVERY section in the sidebar ── */
+.sidebar > section {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 1.2rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sidebar > section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 77, 77, 0.25);
+}
+
+/* ── Section Headings ── */
+.sidebar h2 {
+    font-size: var(--font-lg);
+    color: var(--color-text);
+    margin: 0 0 0.8rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid rgba(255, 77, 77, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar > section:last-of-type h2 {
+    border-bottom-color: rgba(173, 255, 47, 0.3); /* Green accent for Passions/Images */
+}
+
+
+/* ====== FIX GAP BETWEEN EDUCATION AND STORY ====== */
+
+/* 1. Force Main Content to stack tightly at the top */
+.main-content {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important; /* Keeps items at the top */
+    align-items: stretch !important;
+    gap: 2rem; /* Adjust this value to control the space between sections */
+    height: auto !important; /* Prevents stretching to fill screen */
+}
+
+/* 2. Remove height/margin from the wrapper */
+.hero-image {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 3. Ensure Education Grid doesn't push down */
+.edu-grid {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 4. Remove the margin-top from the Story section */
+.about-story {
+    margin-top: 0 !important; /* Removes the inline style="margin-top: 2rem" */
+    padding-top: 0 !important;
+}
+
+
+/* ==========================================
+   SIDEBAR SKILLS: Compact Box Style
+   ========================================== */
+
+/* 1. The Box Container */
+.sidebar .skills {
+    background: #1a2f3a; /* Deep cute black */
+    border: 1px solid rgba(255, 77, 77, 0.3); /* Subtle red border */
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Full width of sidebar */
+    box-sizing: border-box;
+}
+
+/* Hover Effect */
+.sidebar .skills:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.15);
+    border-color: rgba(255, 77, 77, 0.5);
+}
+
+/* 2. The Heading */
+.sidebar .skills h2 {
+    font-size: 0.95rem; /* Smaller heading */
+    margin: 0 0 0.8rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* 3. The List Items (Skills) */
+.sidebar .about-list {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar .about-list li {
+    font-size: 0.75rem; /* Shrunk text to fit */
+    color: #dcdcdc; /* Light grey text for contrast */
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    background: rgba(255, 255, 255, 0.04); /* Subtle inner highlight */
+    border-left: 2px solid var(--color-secondary); /* Red accent line */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.3;
+    transition: all 0.2s ease;
+}
+
+/* Hover on individual skill */
+.sidebar .about-list li:hover {
+    background: rgba(255, 77, 77, 0.1);
+    transform: translateX(2px);
+    border-left-color: greenyellow; /* Turns green on hover */
+}
+
+.sidebar .about-list li i {
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    width: 14px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* 4. Special Style for the last box (Passions) */
+.sidebar .skills:last-child {
+    border-color: rgba(173, 255, 47, 0.2); /* Green border for passions */
+}
+
+.sidebar .skills:last-child h2 {
+    border-bottom-color: rgba(173, 255, 47, 0.2);
+}
+
+.sidebar .skills:last-child .about-list li {
+    border-left-color: greenyellow;
+}
+
+.sidebar .skills:last-child .about-list li i {
+    color: greenyellow;
+}
+
+.sidebar .skills:last-child .about-list li:hover {
+    background: rgba(173, 255, 47, 0.1);
+}
+
+
+
+.intrest-gallery {
+    outline: 2px solid red; /* Visual border to see the box */
+    background: rgba(255, 0, 0, 0.1); /* Slight red tint */
+}
+
+/* ====== FORCE ALL GRID COLUMNS TO TOP ====== */
+
+/* 1. Fix the Parent Grid Alignment */
+.magazine-grid {
+    align-items: start !important; /* Forces all columns to start at the top */
+    align-content: start !important;
+}
+
+/* 2. Ensure Gallery doesn't center itself */
+.intrest-gallery {
+    align-self: start !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    position: static !important; /* Remove relative positioning if it's causing offset */
+    top: 0 !important;
+}
+
+/* 3. Remove any hidden margins on the Title */
+.intrest-gallery h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* ====== SIDEBAR: 3 BOXES IN 1 ROW ====== */
+
+.sidebar {
+    display: flex !important;
+    flex-direction: row !important; /* Horizontal row instead of column */
+    gap: 1rem; /* Space between boxes */
+    align-items: stretch; /* Make all boxes same height */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+/* Each skill section becomes a box */
+.sidebar > section {
+    flex: 1 1 30%; /* Each takes ~30% width */
+    min-width: 250px; /* Minimum width before wrapping */
+    background: #1a2f3a;
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Shrink text to fit in boxes */
+.sidebar h2 {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.sidebar .about-list li {
+    font-size: 0.7rem; /* Smaller text */
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.sidebar .about-list li i {
+    font-size: 0.75rem;
+    width: 12px;
+}
+
+/* Mobile: Stack vertically on small screens */
+@media (max-width: 900px) {
+    .sidebar {
+        flex-direction: column !important; /* Back to column on mobile */
+    }
+    
+    .sidebar > section {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+/* ====== SIDEBAR LAYOUT: Background Long, Skills in 3 Columns ====== */
+
+.sidebar {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important; /* Allows the 3 boxes to wrap to the next line */
+    gap: 1rem;
+    align-items: stretch;
+}
+
+/* 1. My Background (First Section) -> Full Width */
+.sidebar > section:nth-child(1) {
+    flex: 0 0 100% !important; /* Forces it to take the whole row */
+    width: 100% !important;
+    order: 1;
+}
+
+/* 2. Technical, Professional, Passions (Next 3 Sections) -> Row of 3 */
+.sidebar > section:nth-child(2),
+.sidebar > section:nth-child(3),
+.sidebar > section:nth-child(4) {
+    flex: 1 1 30% !important; /* Each takes roughly 1/3 of the width */
+    min-width: 220px; /* Prevents them from getting too small */
+    order: 2; /* Keeps them after the background section */
+}
+
+/* Optional: Mobile responsiveness - stack them on small screens */
+@media (max-width: 900px) {
+    .sidebar > section {
+        flex: 0 0 100% !important; /* Stack everything vertically on mobile */
+        width: 100% !important;
+    }
+}
+
+/* ====== SHRINK SKILL TEXT TO ONE LINE ====== */
+
+.sidebar .about-list li {
+    font-size: 0.7rem; /* Smaller text */
+    letter-spacing: 0.02em;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+    padding: 6px 8px;
+    margin-bottom: 6px;
+}
+
+/* Make icons smaller too */
+.sidebar .about-list li i {
+    font-size: 0.8rem;
+    width: 16px;
+    flex-shrink: 0; /* Prevents icon from shrinking */
+}
+
+/* Shrink the heading too */
+.sidebar h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Reduce padding in the boxes */
+.sidebar > section {
+    padding: 1rem;
 }

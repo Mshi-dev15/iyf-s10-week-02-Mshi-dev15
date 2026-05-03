@@ -3,62 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith Mshiki - About Me</title>
+    <title>Faith Mshiki - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
   <nav class="navbar">
     <div class="logo"><strong>Faith Mshiki</strong></div>
     <i class="fa-solid fa-bars" id="menu-btn"></i>
     <div class="nav-link" id="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Project</a>
-    <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Project</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 </header>
+
 <main>
-<section id="hero">
-  <img src="images/1000102180.jpg" alt="Mshiki Image">
-  <div class="hero-text">
-  <h1>Faith Mshiki</h1>
-  <p>Hello! I`m Faith Mshiki, a passionate learner exploring web development, technology, and creativity. I love building projects that teach me new skills and challenge me to grow.</p>
-  
- 
 
-  <p>Check out my <a href="about.html">About Me</a> page, view my <a href="projects.html">Projects</a>, or <a href="contact.html">Contact Me</a>.</p>
+  <!-- HERO: photo left, intro text right -->
+  <section id="hero">
+    <img src="images/1000102180.jpg" alt="Faith Mshiki">
+    <div class="hero-text">
+      <h1>Faith Mshiki</h1>
+      <p>
+        Hello! I'm Faith Mshiki, a multidisciplinary learner passionate about technology,
+        logistics, and problem-solving. I'm currently pursuing a course in Supply Chain Management
+        as well as deepening my skills in web development. I love building
+        projects that challenge me and exploring ideas across many fields. I have a background
+        in plant operations, networking, and safety — and outside of work I'm drawn to the
+        natural world, the cosmos, history, and the way economies shape everyday life.
+      </p>
+      <p>Check out my <a href="about.html">About Me</a> page, view my <a href="projects.html">Projects</a>, or <a href="contact.html">Contact Me</a>.</p>
+      <p>Favorite resource: <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></p>
+      <p>Contact me: <a href="mailto:faithmshiki@gmail.com">faithmshiki@gmail.com</a></p>
+      <p><a href="contact.html" class="btn card-btn">Contact Me</a></p>
+    </div>
+  </section>
 
+  <!-- TWO COLUMNS: What I Bring + My Passions -->
+  <div class="hero-lists-row">
 
-    <h2>My Hobbies</h2>
-    <ul class="hobbies-list">
-        <li>Photography and hiking</li>
-        <li>Reading about economics</li>
-        <li>Coding and web development</li>
+    <div class="hero-list-col glass-col">
+      <h2><i class="fa-solid fa-briefcase col-icon"></i> My Skills</h2>
+      <ul class="hobbies-list">
+        <li><i class="fa-solid fa-box-open"></i> Supply Chain Management (Certificate)</li>
+        <li><i class="fa-solid fa-network-wired"></i> Cisco Networking Certification</li>
+        <li><i class="fa-solid fa-hard-hat"></i> Plant Operations — Crane &amp; Forklift Operator</li>
+        <li><i class="fa-solid fa-kit-medical"></i> First Aid &amp; Fire Safety Certified</li>
+        <li><i class="fa-solid fa-code"></i> Web Development (HTML, CSS, JavaScript, React)</li>
+      </ul>
+    </div>
+
+    <div class="hero-list-col glass-col passion-col">
+      <h2><i class="fa-solid fa-heart col-icon"></i> My Intrests</h2>
+      <ul class="hobbies-list">
+        <li><i class="fa-solid fa-mountain"></i> Hiking &amp; travel — the Rift Valley, volcanoes, forests &amp; deserts</li>
+        <li><i class="fa-solid fa-star"></i> Astronomy — black holes, dark matter, the Milky Way &amp; beyond</li>
+        <li><i class="fa-solid fa-landmark"></i> History — understanding the events that shaped our world</li>
+        <li><i class="fa-solid fa-chart-line"></i> Economics &amp; business — how markets, governments &amp; trade interact</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- CERTIFICATIONS: big centered cards -->
+  <div class="cert-list-section">
+    <h2 class="cert-heading"><i class="fa-solid fa-certificate"></i> Certifications &amp; Training</h2>
+    <ul class="cert-list">
+      <li>
+        <div class="cert-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+        <div class="cert-info">
+          <span class="cert-title">Supply Chain Management</span>
+          <span class="cert-sub">Certificate</span>
+        </div>
+      </li>
+      <li>
+        <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <div class="cert-info">
+          <span class="cert-title">Cisco Networking</span>
+          <span class="cert-sub">Certification</span>
+        </div>
+      </li>
+      <li>
+        <div class="cert-icon"><i class="fa-solid fa-hard-hat"></i></div>
+        <div class="cert-info">
+          <span class="cert-title">Crane &amp; Forklift Operator</span>
+          <span class="cert-sub">Plant Operations</span>
+        </div>
+      </li>
+      <li>
+        <div class="cert-icon"><i class="fa-solid fa-fire-extinguisher"></i></div>
+        <div class="cert-info">
+          <span class="cert-title">First Aid &amp; Fire Safety</span>
+          <span class="cert-sub">Certified</span>
+        </div>
+      </li>
+      <li>
+        <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+        <div class="cert-info">
+          <span class="cert-title">Web Development</span>
+          <span class="cert-sub">IYF Weekend Academy</span>
+        </div>
+      </li>
     </ul>
-       <p>Check out my favorite website: <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></p>
+  </div>
 
-       <p>Contact me: <a href="mailto:faithmshiki@gmail.com">faithmshiki@gmail.com</a></p>  
-       
-       <p><a href="contact.html" class="btn card-btn">Contact Me</a></p>
-       </div>
-
-       </section>
-  </main>
+</main>
 
 <footer class="site-footer">
   <div class="footer-row">
     <div class="footer-column">
       <h3>About</h3>
-      <p>Hello! I'm Faith Mshiki, exploring web development, creativity, and tech projects.</p>
+      <p>Faith Mshiki — Supply Chain professional, certified operator, and web developer in the making.</p>
     </div>
-
     <div class="footer-column links">
       <h3>Links</h3>
       <ul>
@@ -68,19 +133,17 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
     <div class="footer-column contact">
       <h3>Contact</h3>
       <p>Email: <a href="mailto:faithmshiki@gmail.com">faithmshiki@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/Mshi-dev15" target="_blank">Mshi-dev15</a></p>
     </div>
   </div>
-
   <div class="footer-bottom">
     <p>© 2026 Faith Mshiki</p>
   </div>
 </footer>
-<script src="main.js"></script>
 
+<script src="main.js"></script>
 </body>
 </html>
